@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="seo & digital marketing">
+    <meta name="keywords" content="marketing,digital marketing,creative, agency, startup,promodise,onepage, clean, modern,seo,business, company">
+    <meta name="author" content="Themefisher.com">
+
+   <title>HFDS1 - Local</title>
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.css">
+    <!-- Icofont Css -->
+    <link rel="stylesheet" href="../plugins/fontawesome/css/all.css">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="../plugins/animate-css/animate.css">
+    <!-- Icofont -->
+    <link rel="stylesheet" href="../plugins/icofont/icofont.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+
+<nav class="navbar navbar-expand-lg fixed-top trans-navigation">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                Back
+                <!-- <img src="images/logo.png" alt="" class="img-fluid b-logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-bars"></i>
+                </span>
+              </button>
+        </div>
+</nav>
+    <!--MAIN HEADER AREA END -->
+<!--MAIN BANNER AREA START -->
+<div class="page-banner-area page-contact" id="page-banner">
+    <div class="overlay dark-overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+                <div class="banner-content content-padding">
+                    <h1 class="text-white">Meeting Minutes</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  TESTIMONIAL AREA START  -->
+<section class="section-padding bg-main">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-8 m-auto col-sm-12 col-md-12">
+        <div class="carousel slide" id="test-carousel2">
+            <div class="carousel-inner" id="carousel">
+                <ol class="carousel-indicators" id="indics">
+                    <li data-target="#test-carousel2" data-slide-to="0" class="active"></li>
+                </ol>
+
+                <div class="carousel-item active" style="margin-bottom: 10px;">
+                    <div class="row row-striped">
+                        <div class="col-2 text-right">
+                            <h1 class="display-4"><span class="badge badge-secondary date">XX</span></h1>
+                            <h2 class="month">XXX</h2>
+                        </div>
+                        <div class="col-10">
+                            <h4 class="text-uppercase">Meeting</h4>
+                            <h5 class="text-uppercase">Agenda: </h5>
+                            <span>
+
+                            </span>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-clock-o time" aria-hidden="true"></i></li>
+                            </ul>
+                            <h5>Absentees: </h5>
+                            <h5>Summary:</h5>
+                            <ul class="summary">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+<script>
+    const meetingData = [
+        {
+            timeStamp: new Date(2021, 10 - 1, 22, 16),
+            duration: 30,
+            agenda: 'Discuss project requirements and questions for submissions',
+            absentees: [],
+            summary: [
+                'Updated requirements',
+                'Formulated Questions'
+            ]
+        },
+        {
+            timeStamp: new Date(2021, 11 - 1, 2, 21),
+            duration: 15,
+            agenda: 'Discuss individual assignments and responsiblities for upcoming documents',
+            absentees: [],
+            summary: [
+                'Class/Domain: Ethan/Tyler by (11/06-07)',
+                'Sequence/State: Thad/Alec by (11/10-11)',
+                'Prototype: Joseph by (11/15-16)',
+                'SRS: All by (11/20-21)',
+                'Need to clarify whether both class diagrams and models need to be done'
+            ]
+        },
+        {
+            timeStamp: new Date(2021, 11 - 1, 6, 21, 30),
+            duration: 30,
+            agenda: 'Discuss class diagram and get input from whole group prior to submission',
+            absentees: ['Alec'],
+            summary: [
+                'Class diagram needs more functions', 
+                'A sensor parent class is missing',
+                'A connection between the driver assist and attention systems.'
+            ]
+        },
+        {
+            timeStamp: new Date(2021, 11 - 1, 11, 21),
+            duration: 25,
+            agenda: 'Discuss sequence and state diagrams and get input from whole group prior to submission',
+            absentees: ['Tyler'],
+            summary: [
+                'Obstacle sequence needs to also incorporate camera data into checks',
+                'Add infrared to vehicle position?',
+                'Change reply messages to normal messages'
+            ]
+        },
+        {
+            timeStamp: new Date(2021, 11 - 1, 15, 16),
+            duration: 15,
+            agenda: 'Discuss SRS document and assign specific parts to each team member.',
+            absentees: [],
+            summary: [
+                'Discussed new info on data dictionary, use cases/diagram, and state diagrams.',
+                'Joseph: Sections 1&5 (Intro/Prototype)',
+                'Thad/Alec: Sections 3&4 (Requirements/Modeling)',
+                'Ethan/Tyler: Section 4 (Specific Requirements)'
+            ]
+        }
+    ];
+
+    const carousel = document.getElementById('carousel');
+    const indicators = document.getElementById('indics');
+
+    const carouselItemTemplate = carousel.children[1];
+    const indicatorTemplate = indicators.children[0];
+
+    meetingData.forEach((data, index) => {
+        let newItem = carouselItemTemplate;
+        let newItemIndicator = indicatorTemplate;
+
+        if(index != 0) {
+            newItem = carouselItemTemplate.cloneNode(true);
+            newItemIndicator = indicatorTemplate.cloneNode(true);
+            newItem.classList.remove('active');
+            newItemIndicator.classList.remove('active');
+        }
+
+        const dateElement = newItem.children[0].children[0].children[0]; 
+        const monthElement = newItem.children[0].children[0].children[1];
+
+        dateElement.children[0].textContent = data.timeStamp.getDate().toString().padStart(2, '0');
+        monthElement.textContent = data.timeStamp.toLocaleString('default', { month: 'short' }).toUpperCase();
+        
+        const subElement = newItem.children[0].children[1];
+
+        const meetingNumberElement = subElement.children[0];
+        const agendaElement = subElement.children[2];
+        const timeElement = subElement.children[3].children[0];
+        const absenteesElement = subElement.children[4];
+        const summaryElement = subElement.children[6];
+
+        meetingNumberElement.textContent = `Meeting ${index + 1}`;
+        agendaElement.textContent = data.agenda;
+
+        const startDate = data.timeStamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const endDate = new Date(data.timeStamp.getTime()+(data.duration*60*1000));
+        timeElement.textContent = `${startDate} to ${endDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+
+        absenteesElement.textContent = `Absentees: ${data.absentees.join() || "None"}`;
+        summaryElement.innerHTML = data.summary.map(string => `<li>${string}</li>`).join('');
+
+        newItemIndicator.setAttribute('data-slide-to', index);
+
+        if (index != 0) {
+            carousel.appendChild(newItem);
+            indicators.appendChild(newItemIndicator);
+        }
+    });
+
+</script>
+<!--  TESTIMONIAL AREA END  -->
+
+   
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+
+    
+    <!-- Main jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4.3.1 -->
+    <script src="../plugins/bootstrap/js/popper.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+   <!-- Woow animtaion -->
+    <script src="../plugins/counterup/wow.min.js"></script>
+    <script src="../plugins/counterup/jquery.easing.1.3.js"></script>
+     <!-- Counterup -->
+    <script src="../plugins/counterup/jquery.waypoints.js"></script>
+    <script src="../plugins/counterup/jquery.counterup.min.js"></script>
+  </body>
+  </html>
+   
