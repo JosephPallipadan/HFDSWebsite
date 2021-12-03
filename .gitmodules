@@ -1,3 +1,3 @@
 [submodule "HFDSPrototype"]
 	path = HFDSPrototype
-	url = https://github.com/JosephPallipadan/HFDSPrototype.git
+	url = git@github.com:JosephPallipadan/HFDSPrototype.git
